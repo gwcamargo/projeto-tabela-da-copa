@@ -3,11 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Tabela da Copa 2022</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
+    <main class="tela-principal">
+        <h1>Tabela da Copa do Mundo</h1>
+        <h2>Catar 2022</h2>
+
+        <div class="form-control">
+            <label for="letra_do_grupo">Escolha o Grupo</label>
+            <select name="letra_do_grupo" id="letra_do_grupo" class="letra_do_grupo" onchange="verGrupos(this.value)">
+                <option value="0">A</option>
+                <option value="1">B</option>
+                <option value="2">C</option>
+                <option value="3">D</option>
+                <option value="4">E</option>
+                <option value="5">F</option>
+                <option value="6">G</option>
+                <option value="7">H</option>
+            </select>
+        </div>
+
+        <section class="grupos">
+            <h3 class="titulo_grupo">Grupo</h3>
+            <ol class="lista_grupo"></ol>
+        </section>
+    </main>
     
     <script src="index.js"></script>
 </body>
