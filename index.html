@@ -7,30 +7,46 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <main class="tela-principal">
-        <h1>Tabela da Copa do Mundo</h1>
-        <h2>Catar 2022</h2>
+    <span id="topo"></span>
 
-        <div class="form-control">
-            <label for="letra_do_grupo">Escolha o Grupo</label>
-            <select name="letra_do_grupo" id="letra_do_grupo" class="letra_do_grupo" onchange="verGrupos(this.value)">
-                <option value="0">A</option>
-                <option value="1">B</option>
-                <option value="2">C</option>
-                <option value="3">D</option>
-                <option value="4">E</option>
-                <option value="5">F</option>
-                <option value="6">G</option>
-                <option value="7">H</option>
-            </select>
+    <main class="tela-principal">
+    
+        <header>
+            <h1>Tabela da Copa do Mundo</h1>
+            <h2>Catar 2022</h2>
+        </header>
+
+        <!-- preenchida pelo js  -->
+        <section class="listas"></section>
+
+        <!-- modelo de listaDoGrupo -->
+        <div class="modelo">
+            <section class="listaDoGrupo">
+                <h3 class="tituloDoGrupo">Grupo</h3>
+                <ol class="listaDeSelecoes">
+                    <li><img class='bandeirap' src='../images/bandeiras/escudo_default.png' alt='bandeira' />
+                        Nome da Seleção 1</li>
+                    <li><img class='bandeirap' src='../images/bandeiras/escudo_default.png' alt='bandeira' />
+                        Nome da Seleção 2</li>
+                    <li><img class='bandeirap' src='../images/bandeiras/escudo_default.png' alt='bandeira' />
+                        Nome da Seleção 3</li>
+                    <li><img class='bandeirap' src='../images/bandeiras/escudo_default.png' alt='bandeira' />
+                        Nome da Seleção 4</li>
+                </ol>
+            </section>
+            <!-- /modelo de listaDeGrupos -->
         </div>
 
-        <section class="grupos">
-            <h3 class="titulo_grupo">Grupo</h3>
-            <ol class="lista_grupo"></ol>
-        </section>
+        <div class="inferiordireita">
+            <a class="btn btn-topo" href="#topo">&UpArrow;</a>
+        </div>
+
+        <footer>
+            <p>Produzido por Guilherme William de Camargo para seus estudos &copy; 2022</p>
+        </footer>
+
     </main>
     
-    <script src="index.js"></script>
+    <script src="js/index.js"></script>
 </body>
 </html>
