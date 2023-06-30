@@ -7,55 +7,85 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <span id="topo"></span>
-
-    <main class="tela-principal">
-    
+    <main class="telaPrincipal">
         <header>
-            <h1>Tabela da Copa do Mundo</h1>
-            <h2>Catar 2022</h2>
+            <h1>Copa do Mundo Catar 2022</h1>
             <nav>
-                <h3>
-                    Jogos
-                    <a href="jogos.html?rodada=1">1</a>
-                    <a href="jogos.html?rodada=2">2</a>
-                    <a href="jogos.html?rodada=3">3</a>
-                    <a href="finais.html?rodada=oitavas">8s</a>
-                    <a href="finais.html?rodada=quartas">4s</a>
-                    <a href="finais.html?rodada=semi">2s</a>
-                    <a href="finais.html?rodada=terceiro">3º</a>
-                    <a href="finais.html?rodada=final">1s</a>
-                </h3> 
+                <ul class="menu">
+                    <li><a id="btnGrupos" class="" onclick="">Grupos</a></li>
+                    <li><a class="" onclick="renderizarJogos(1)">1</a></li>
+                    <li><a class="" onclick="renderizarJogos(2)">2</a></li>
+                    <li><a class="" onclick="renderizarJogos(3)">3</a></li>
+                    <li><a class="" onclick="renderizarFinais('finais')">Fase Final</a></li>
+                </ul>
             </nav>
         </header>
 
-        <!-- preenchida pelo js  -->
-        <section class="listas"></section>
+        <div id="divGrupo">
+            <h2>Grupos</h2>
+            <!-- preenchida pelo js listas das selecoes por grupo -->
+            <section class="listas"></section>
+        </div>
 
-        <!-- modelo de listaDoGrupo -->
+        <h2>Tabela de Jogos</h2>
+
+        <div id="divRodadas" class="div">
+            <h3><span class="rodada"></span></h3>
+            <!-- fase de grupos 1, 2, 3 rodada -->
+            <section class="tabelaDeJogos"></section>
+        </div>
+
+        <div id="divFinais" class="div">
+            <h3>Fases Finais</h3>
+            <!-- fases finais -->
+            <section class="tabelaDeJogosFinais"></section>
+        </div>
+        <!-- /preenchida pelo js  -->
+
+        <!-- modelos de listaDoGrupo -->
         <div class="modelo">
             <section class="listaDoGrupo">
                 <h3 class="tituloDoGrupo">Grupo</h3>
                 <ol class="listaDeSelecoes">
-                    <li><img class='bandeirap' src='images/bandeiras/escudo_default.png' alt='bandeira' />
+                    <li><img class='bandeirap' src='../images/bandeiras/escudo_default.png' alt='bandeira' />
                         Nome da Seleção 1</li>
-                    <li><img class='bandeirap' src='images/bandeiras/escudo_default.png' alt='bandeira' />
+                    <li><img class='bandeirap' src='../images/bandeiras/escudo_default.png' alt='bandeira' />
                         Nome da Seleção 2</li>
-                    <li><img class='bandeirap' src='images/bandeiras/escudo_default.png' alt='bandeira' />
+                    <li><img class='bandeirap' src='../images/bandeiras/escudo_default.png' alt='bandeira' />
                         Nome da Seleção 3</li>
-                    <li><img class='bandeirap' src='images/bandeiras/escudo_default.png' alt='bandeira' />
+                    <li><img class='bandeirap' src='../images/bandeiras/escudo_default.png' alt='bandeira' />
                         Nome da Seleção 4</li>
                 </ol>
             </section>
             <!-- /modelo de listaDeGrupos -->
+
+            <!-- modelo .listaDejogos -->
+            <section class="listaDeJogos">
+                <article class="jogo">
+                    <h3 class="grupo"></h3>
+                    <h5 class="data"></h5>
+                    <h3 class="partida"></h3>
+                    <h5 class="estadio"></h5>
+                </article>
+            </section>
+
+            <!-- modelo .listaDejogosFinais -->
+            <section class="listaDeJogosFinais">
+                <article class="jogo">
+                    <h3 class="fase"></h3>
+                    <h5 class="data">Data</h5>
+                    <h3 class="partida">XYZ x ZYX</h3>
+                    <h5 class="estadio">Estádio</h5>
+                </article>
+            </section>
         </div>
 
-        <div class="inferiordireita">
-            <a class="btn btn-topo" href="#topo">&UpArrow;</a>
+        <div class="inferiorDireita">
+            <button class="btn btnTopo" id="irTopo">&UpArrow;</button>
         </div>
-
+        
         <footer>
-            <p>Produzido por Guilherme William de Camargo para seus estudos &copy; 2022</p>
+            <p>Produzido por Edson Maia &copy; 2022</p>
         </footer>
 
     </main>

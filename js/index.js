@@ -1,3 +1,22 @@
+// botão ir ao topo
+document.querySelector("#irTopo").addEventListener('click', () => window.scrollTo({
+    top: 0,
+    behavior: 'smooth'
+}))
+
+// botão grupos mostrar / ocultar divGrupos
+document.querySelector('#btnGrupos').addEventListener('click', () => {
+    document.querySelector('#divGrupo').classList.toggle('ocultar')
+})
+
+const ocultar = (elemento) => {
+    document.querySelector(elemento).classList.add('ocultar')
+}
+
+const mostrar = (elemento) => {
+    document.querySelector(elemento).classList.add('ocultar')
+}
+
 const verGrupos = () => {
 
     // requisição dos dados json
